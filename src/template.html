@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nebula Music</title>
+</head>
+
+<body>
+
+  <div class="app">
+
+    <aside class="sidebar">
+
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 18V5l10-2v13" />
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="16" cy="16" r="3" />
+          </svg>
+        </div>
+
+        <div class="logo-text">
+          <h1>Nebula</h1>
+          <p>Music for every mood</p>
+        </div>
+      </div>
+
+
+      <nav class="navigation">
+
+        <button class="nav-item active" id="home-btn">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 11 12 3l9 8" />
+            <path d="M5 10v10h14V10" />
+            <path d="M9 20v-6h6v6" />
+          </svg>
+
+          <span>Home</span>
+        </button>
+
+
+        <button class="nav-item" id="favorites-btn">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 21s-7-4.4-9.5-9C.5 8 3 4 7 4c2.3 0 4 1.5 5 3 1-1.5 2.7-3 5-3 4 0 6.5 4 4.5 8C19 16.6 12 21 12 21Z" />
+          </svg>
+
+          <span>Favorites</span>
+        </button>
+
+      </nav>
+
+    </aside>
+
+
+    <main class="main-content">
+
+      <header class="header">
+        <div>
+          <h2>Discover Music</h2>
+          <p>Find your favorite songs</p>
+        </div>
+
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-3.5-3.5"></path>
+          </svg>
+
+          <input type="text" id="search" placeholder="Search songs, artists..." />
+
+          <button id="btn">Search</button>
+        </div>
+      </header>
+
+
+      <section class="songs-section">
+        <h2>All Songs</h2>
+        <div id="loader" class="loader hidden">
+          <div class="spinner"></div>
+          <p>Loading songs...</p>
+        </div>
+
+        <div id="songs" class="songs-grid">
+        </div>
+        <div id="pagination" class="pagination hidden"></div>
+      </section>
+
+    </main>
+
+
+    <aside id="song-detail" class="song-detail hidden">
+    </aside>
+    <div id="mini-player" class="mini-player hidden"></div>
+
+  </div>
+
+</body>
+
+</html>
