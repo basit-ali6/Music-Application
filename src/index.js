@@ -10,6 +10,7 @@ const favoritesBtn = document.querySelector("#favorites-btn");
 const loader = document.querySelector("#loader");
 const songsContainer = document.querySelector("#songs");
 const pagination = document.querySelector("#pagination");
+const sectionTitle = document.querySelector("#section-title");
 
 let currentSongs = [];
 let homeSongs = [];
@@ -187,6 +188,7 @@ function renderPagination() {
 
 favoritesBtn.addEventListener("click", () => {
     pagination.classList.add("hidden");
+    sectionTitle.textContent = "Favorite Songs";
 
     const favorites = getFavorites();
 
@@ -198,6 +200,7 @@ favoritesBtn.addEventListener("click", () => {
 
 homeBtn.addEventListener("click", () => {
     pagination.classList.add("hidden");
+    sectionTitle.textContent = "All Songs";
 
     displaySongs(homeSongs);
 
